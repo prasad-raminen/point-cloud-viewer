@@ -1,0 +1,42 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+.vs/
+.vscode/*
+!.vscode/extensions.json
+*.rsuser
+TestResults/
+*.trx
+coverage*.xml
+coverage*.json
+
+# Local dev settings (may hold secrets)
+appsettings.*.local.json
+appsettings.Development.local.json
+.env
+.env.*
+!.env.example
+
+# Runtime data written by the API's local storage provider
+data/
+**/App_Data/
+
+# Node / Vite
+node_modules/
+dist/
+dist-ssr/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vite/
+coverage/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
