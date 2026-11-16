@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\PointCloudViewer.Core\PointCloudViewer.Core.csproj" />
     <ProjectReference Include="..\..\src\PointCloudViewer.Api\PointCloudViewer.Api.csproj" />
+    <ProjectReference Include="..\..\src\PointCloudViewer.Infrastructure\PointCloudViewer.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

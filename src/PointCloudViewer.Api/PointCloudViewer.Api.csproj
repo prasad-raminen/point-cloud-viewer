@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PointCloudViewer.Core\PointCloudViewer.Core.csproj" />
+    <ProjectReference Include="..\PointCloudViewer.Infrastructure\PointCloudViewer.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
