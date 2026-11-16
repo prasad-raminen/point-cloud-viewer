@@ -1,0 +1,31 @@
+# Local stack: API (local-disk storage, demo data seeded on first start) + nginx-served client.
+#   docker compose up --build
+#   client:  http://localhost:8080
+#   swagger: http://localhost:5080/swagger
+services:
+  api:
+    build:
+      context: .
+      dockerfile: src/PointCloudViewer.Api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      Swagger__Enabled: "true"
+      Storage__Provider: LocalDisk
+      DemoData__Enabled: "true"
+    ports:
+      - "5080:8080"
+    volumes:
+      - pointcloud-data:/app/data
+    restart: unless-stopped
+
+  client:
+    build:
+      context: ./client
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  pointcloud-data:
